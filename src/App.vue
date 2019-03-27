@@ -57,9 +57,9 @@ export default {
 
   methods: {
     calculate () {
-      var secDegEq = new SecondDegreeEquation(this.valorA, this.valorB, this.valorC)
+      var secDegreeEquation = new SecondDegreeEquation(this.valorA, this.valorB, this.valorC)
 
-      console.log(secDegEq.calculateX())
+      console.log(secDegreeEquation.calculateX())
     }
   }
 }

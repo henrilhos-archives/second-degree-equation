@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-      <div class="mb-3 h1 text-center" id="page-title">
+      <div class="mb-3 h1 text-center">
         Equação de Segundo Grau
       </div>
 
@@ -26,15 +26,41 @@
         </div>
       </div>
       <div class="row">
-        <button class="btn col btn-outline-primary mx-2">
+        <button @click="calculate()" class="btn col btn-outline-primary mx-3">
           Calcular
         </button>
+      </div>
+
+      <div class="mt-3 alert alert-danger" role="alert">
+        <span>AAAAA</span>
+      </div>
+
+      <div class="dropdown-divider my-3"></div>
+
+      <div class="mt-2 h3 text-center">
+        aaaaaaa
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { SecondDegreeEquation } from '@/assets/second-degree-equation.js'
 export default {
+  data () {
+    return {
+      valorA: null,
+      valorB: null,
+      valorC: null
+    }
+  },
+
+  methods: {
+    calculate () {
+      var secDegEq = new SecondDegreeEquation(this.valorA, this.valorB, this.valorC)
+
+      console.log(secDegEq.calculateX())
+    }
+  }
 }
 </script>

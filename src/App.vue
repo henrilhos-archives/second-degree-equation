@@ -31,14 +31,21 @@
         </button>
       </div>
 
-      <div class="mt-3 alert alert-danger" role="alert">
-        <span>AAAAA</span>
+      <div
+        v-if="errorAlert"
+        class="mt-3 alert alert-danger"
+        role="alert"
+      >
+        {{ errorMessage }}
       </div>
 
       <div class="dropdown-divider my-3"></div>
 
-      <div class="mt-2 h3 text-center">
-        aaaaaaa
+      <div
+        v-if="resultIsAvailable"
+        class="mt-2 h3 text-center"
+      >
+        {{ result }}
       </div>
     </div>
   </div>
@@ -51,15 +58,30 @@ export default {
     return {
       valorA: null,
       valorB: null,
-      valorC: null
+      valorC: null,
+
+      errorAlert: false,
+      errorMessage: null,
+
+      resultIsAvailable: false,
+      result: null
     }
   },
 
   methods: {
     calculate () {
-      var secDegreeEquation = new SecondDegreeEquation(this.valorA, this.valorB, this.valorC)
+      let secDegreeEquation = new SecondDegreeEquation(this.valorA, this.valorB, this.valorC)
+      let equationSolved = secDegreeEquation.calculate()
 
-      console.log(secDegreeEquation.calculateX())
+      if (equationSolved.error) {
+        this.errorAlert = true
+        this.errorMessage = equationSolved.errorMessage
+        this.resultIsAvailable = false
+      } else {
+        this.errorAlert = false
+        this.resultIsAvailable = true
+        this.result = equationSolved
+      }
     }
   }
 }

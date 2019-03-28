@@ -1,29 +1,23 @@
-# second-degree-equation
+# Equação de Segundo Grau
 
-## Project setup
-```
+Projeto realizado para a matéria de matemática computacional.
+
+Para visualizar o construtor e os métodos que realizam os cálculos, [clique aqui](https://github.com/castilh0s/second-degree-equation/blob/master/src/assets/second-degree-equation.js).
+
+## Configurar o projeto
+
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
+### Compilar o projeto localmente
+
+```bash
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
+### Compilar para produção
+
+```bash
 npm run build
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

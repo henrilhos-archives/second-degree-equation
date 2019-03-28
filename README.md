@@ -3,6 +3,7 @@
 Projeto realizado para a matéria de matemática computacional.
 
 Para visualizar a calculadora online, [clique aqui](https://castilh0s.github.io/second-degree-equation/).
+
 Para visualizar o construtor e os métodos que realizam os cálculos, [clique aqui](https://github.com/castilh0s/second-degree-equation/blob/master/src/assets/second-degree-equation.js).
 
 ## Configurar o projeto

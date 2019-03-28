@@ -25,6 +25,10 @@ SecondDegreeEquation.prototype = {
     }
 
     return result
+  },
+
+  calculateVertex () {
+
   }
 }
 

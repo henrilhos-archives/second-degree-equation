@@ -45,7 +45,20 @@
         v-if="resultIsAvailable"
         class="mt-2 h3 text-center"
       >
-        {{ result }}
+        <div class="h5">
+          <b>Raízes:</b> {{ result.xValues.x1 }}
+          <span v-if="result.xValues.x2">
+            e {{ result.xValues.x2 }}
+          </span>
+        </div>
+
+        <div class="h5">
+          <b>Coordenada do vértice:</b> ({{ result.vertexValues.x }}, {{ result.vertexValues.y }})
+        </div>
+
+        <div class="h5">
+          <b>Imagem:</b> {{ result.image }}
+        </div>
       </div>
     </div>
   </div>
